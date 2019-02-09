@@ -15,6 +15,11 @@ const isFunctionComponent = component => {
 };
 
 class DisplayComponentArg extends Component {
+  constructor(){
+      super();
+      //window.helloComponent = this;
+  }
+
   errorMessage = err => {
     if (typeof err === "string") {
       return err;
@@ -181,25 +186,9 @@ const generateCustomUi = () => {
   return costumUiLocal;
 };
 
-/* const setInitialState = () => {
-  changeState("greetings");
-}; */
-
-const setInitialState = (() => {
-  return class extends Component {
-    componentDidMount() {
-      const {
-        onStateChange,
-      } = this.props;
-
-      onStateChange("greetings");
-    }
-
-    render() {
-      return null;
-    }
-  };
-})();
+const setInitialState = () => {
+  //changeState("greetings");
+};
 
 const setGreetings = function setGreetings(component) {
   setComponent("greetings", component);
