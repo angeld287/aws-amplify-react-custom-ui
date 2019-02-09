@@ -181,9 +181,25 @@ const generateCustomUi = () => {
   return costumUiLocal;
 };
 
-const setInitialState = (props) => {
-  props.changeAuthState("greetings");
-};
+/* const setInitialState = () => {
+  changeState("greetings");
+}; */
+
+const setInitialState = (() => {
+  return class extends Component {
+    componentDidMount() {
+      const {
+        onStateChange,
+      } = this.props;
+
+      onStateChange("greetings");
+    }
+
+    render() {
+      return null;
+    }
+  };
+})();
 
 const setGreetings = function setGreetings(component) {
   setComponent("greetings", component);
