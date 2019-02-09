@@ -182,6 +182,7 @@ const generateCustomUi = () => {
 };
 
 const setInitialState = function setInitialState(type, event) {
+  const { changeAuthState } = this.props;
   changeAuthState(type, event);
 };
 
