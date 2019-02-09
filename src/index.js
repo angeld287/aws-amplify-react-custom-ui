@@ -269,7 +269,7 @@ export default {
   withAuthenticator,
   configure,
   //Component Setter
-  Greetings,
+  setGreetings,
   setSignIn,
   setTOTPSetup,
   setForgotPassword,
