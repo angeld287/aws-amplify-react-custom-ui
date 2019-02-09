@@ -181,9 +181,9 @@ const generateCustomUi = () => {
   return costumUiLocal;
 };
 
-const setInitialState = function setInitialState(type, event) {
+const setInitialState = (props) => {
   const { changeAuthState } = this.props;
-  changeAuthState(type, event);
+  changeAuthState("greetings");
 };
 
 const setGreetings = function setGreetings(component) {
