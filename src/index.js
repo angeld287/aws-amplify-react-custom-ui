@@ -182,7 +182,7 @@ const generateCustomUi = () => {
 };
 
 var setGreetings = function setGreetings(component) {
-  setComponent("Greetings", component);
+  setComponent("greetings", component);
 };
 
 const setSignIn = component => {
