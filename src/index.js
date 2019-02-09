@@ -103,7 +103,8 @@ let Greetings = () => <div>please provied : Greetings</div>,
 let AmplifyAuthenticator = null;
 const configure = aws_amplify_react => {
   AmplifyAuthenticator = aws_amplify_react.Authenticator;
-  Greetings = aws_amplify_react.Greetings;
+  //Greetings = aws_amplify_react.Greetings;
+  Greetings(aws_amplify_react.Greetings);
   setSignIn(aws_amplify_react.SignIn);
   setTOTPSetup(aws_amplify_react.TOTPSetup);
   setForgotPassword(aws_amplify_react.ForgotPassword);
@@ -178,6 +179,10 @@ const generateCustomUi = () => {
   });
   console.log("costumUiLocal", costumUiLocal);
   return costumUiLocal;
+};
+
+var setGreetings = function setGreetings(component) {
+  setComponent("Greetings", component);
 };
 
 const setSignIn = component => {
@@ -264,6 +269,7 @@ export default {
   withAuthenticator,
   configure,
   //Component Setter
+  Greetings,
   setSignIn,
   setTOTPSetup,
   setForgotPassword,
