@@ -181,7 +181,11 @@ const generateCustomUi = () => {
   return costumUiLocal;
 };
 
-var setGreetings = function setGreetings(component) {
+const setInitialState = function setInitialState(type, event) {
+  changeAuthState(type, event);
+};
+
+const setGreetings = function setGreetings(component) {
   setComponent("greetings", component);
 };
 
@@ -269,6 +273,7 @@ export default {
   withAuthenticator,
   configure,
   //Component Setter
+  setInitialState,
   setGreetings,
   setSignIn,
   setTOTPSetup,
